@@ -1,0 +1,9 @@
+C:\Users\bruno\source\repos\tpfinal\Data\bin\Debug\Data.dll
+C:\Users\bruno\source\repos\tpfinal\Data\bin\Debug\Data.pdb
+C:\Users\bruno\source\repos\tpfinal\Data\bin\Debug\Entities.dll
+C:\Users\bruno\source\repos\tpfinal\Data\bin\Debug\Entities.pdb
+C:\Users\bruno\source\repos\tpfinal\Data\obj\Debug\Data.csprojAssemblyReference.cache
+C:\Users\bruno\source\repos\tpfinal\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\bruno\source\repos\tpfinal\Data\obj\Debug\Data.csproj.CopyComplete
+C:\Users\bruno\source\repos\tpfinal\Data\obj\Debug\Data.dll
+C:\Users\bruno\source\repos\tpfinal\Data\obj\Debug\Data.pdb
