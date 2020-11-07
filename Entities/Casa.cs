@@ -17,8 +17,9 @@ namespace Entities
         private string ambientes;
         private string uri;
         private int estrellas;
+        private string ubicacion;
 
-        public Casa(string _id, string titulo, string descripcion, string direccion, float precio, string ambientes, string uri, int estrellas)
+        public Casa(string _id, string titulo, string descripcion, string direccion, float precio, string ambientes, string uri, int estrellas, string ubicacion)
         {
             this._id = _id;
             this.titulo = titulo;
@@ -28,6 +29,7 @@ namespace Entities
             this.ambientes = ambientes;
             this.uri = uri;
             this.estrellas = estrellas;
+            this.ubicacion = ubicacion;
         }
 
         public string Id
@@ -75,6 +77,12 @@ namespace Entities
         {
             get { return estrellas; }
             set { estrellas = value; }
+        }
+
+        public string Ubicacion
+        {
+            get { return ubicacion; }
+            set { ubicacion = value; }
         }
     }
 }

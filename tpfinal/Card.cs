@@ -13,16 +13,23 @@ namespace tpfinal
 {
     public partial class Card : UserControl
     {
+        
+
+
         public Card(string uri, string title, string ambientes, string description, int stars)
         {
             InitializeComponent();
             titulo.Text = title;
             ambiente.Text = ambientes;
             desripcion.Text = description;
-            byte[] imageBytes = Convert.FromBase64String(uri);
-            MemoryStream memoryStream = new MemoryStream(imageBytes);
-            pictureBox1.InitialImage = null;
-            pictureBox1.Image = Image.FromStream(memoryStream);
+
+            byte[] byteBuffer = Convert.FromBase64String(uri);
+            MemoryStream memoryStream = new MemoryStream(byteBuffer);
+            Bitmap bitmap = new Bitmap(Bitmap.FromStream(memoryStream));
+            pictureBox1.Image = bitmap;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            
+            
             List<star> starsList = new List<star>();
             for (int i = 0; i < stars; i++)
             {

@@ -34,9 +34,9 @@ namespace Services
                             )
                     );
             }
-            catch
+            catch(Exception error)
             {
-                throw new Exception("Error al crear publicación, vuelve a intentar en unos minutos");
+                throw new Exception(error.Message);
             }
         }
     }

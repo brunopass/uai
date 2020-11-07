@@ -17,20 +17,21 @@ namespace Services
         public List<Casa> traerInmuebles()
         {
             List<Casa> casas = new List<Casa>();
-            DataTable dataTable = database.Read("traerInmueble", null);
+            DataTable dataTable = database.Read("traerInmuebles",null);
 
             foreach(DataRow data in dataTable.Rows)
             {
                 casas.Add(
                         new Casa(
                             data["id"].ToString(),
-                            data["titulo"].ToString(),
-                            data["descripcion"].ToString(),
+                            data["title"].ToString(),
+                            data["description"].ToString(),
                             data["direccion"].ToString(),
                             float.Parse(data["precio"].ToString()),
-                            data["ambientes"].ToString(),
+                            "",
                             data["uri"].ToString(),
-                            int.Parse(data["estrellas"].ToString())
+                            int.Parse(data["estrellas"].ToString()),
+                            data["ubicacion"].ToString()
                             )
                     );
             }
@@ -42,7 +43,7 @@ namespace Services
         {
             List<Casa> casas = new List<Casa>();
             SqlParameter[] parameters = { new SqlParameter("@ubicacion", place) };
-            DataTable dataTable = database.Read("traerInmueble", parameters);
+            DataTable dataTable = database.Read("traerInmuebles", parameters);
 
             foreach (DataRow data in dataTable.Rows)
             {
@@ -53,9 +54,10 @@ namespace Services
                             data["descripcion"].ToString(),
                             data["direccion"].ToString(),
                             float.Parse(data["precio"].ToString()),
-                            data["ambientes"].ToString(),
+                            "",
                             data["uri"].ToString(),
-                            int.Parse(data["estrellas"].ToString())
+                            int.Parse(data["estrellas"].ToString()),
+                            data["ubicacion"].ToString()
                             )
                     );
             }
@@ -67,7 +69,7 @@ namespace Services
         {
             List<Casa> casas = new List<Casa>();
             SqlParameter[] parameters = { new SqlParameter("@estrellas", estrellas) };
-            DataTable dataTable = database.Read("traerInmueble", parameters);
+            DataTable dataTable = database.Read("TraerInmueblesEstrellas", parameters);
 
             foreach (DataRow data in dataTable.Rows)
             {
@@ -80,7 +82,8 @@ namespace Services
                             float.Parse(data["precio"].ToString()),
                             data["ambientes"].ToString(),
                             data["uri"].ToString(),
-                            int.Parse(data["estrellas"].ToString())
+                            int.Parse(data["estrellas"].ToString()),
+                            data["ubicacion"].ToString()
                             )
                     );
             }

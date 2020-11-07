@@ -27,7 +27,7 @@ namespace tpfinal
         private void updateVerticalCards()
         {
             Services.Dashboard dashboard = new Services.Dashboard();
-            List<Casa> casas = dashboard.traerInmuebles(3);
+            List<Casa> casas = dashboard.traerInmuebles();
             List<Card> cards = new List<Card>();
 
             foreach (Casa casa in casas)
@@ -48,7 +48,7 @@ namespace tpfinal
         public void updateHorizontalCards()
         {
             Services.Dashboard dashboard = new Services.Dashboard();
-            List<Casa> casas = dashboard.traerInmuebles(3);
+            List<Casa> casas = dashboard.traerInmuebles();
             List<ImageCard> cards = new List<ImageCard>();
 
             foreach (Casa casa in casas)
