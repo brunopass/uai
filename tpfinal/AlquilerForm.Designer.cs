@@ -155,9 +155,9 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(117)))), ((int)(((byte)(127)))));
-            this.panel3.Location = new System.Drawing.Point(-1, 1068);
+            this.panel3.Location = new System.Drawing.Point(-6, 1068);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1067, 136);
+            this.panel3.Size = new System.Drawing.Size(1088, 136);
             this.panel3.TabIndex = 18;
             // 
             // label6

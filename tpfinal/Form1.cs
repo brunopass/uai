@@ -64,30 +64,31 @@ namespace tpfinal
             }
         }
 
+        private void updatePaises()
+        {
+            Services.Dashboard dashboard = new Services.Dashboard();
+            List<Recomendaciones> recomendaciones = new List<Recomendaciones>();
+            List<string> paises = dashboard.traerPaises();
+            foreach(String p in paises)
+            {
+                recomendaciones.Add(new Recomendaciones(p));
+            }
+            foreach (Control control in recomendaciones)
+            {
+                flowLayoutPanel3.Controls.Add(control);
+            }
+            flowLayoutPanel3.AutoScroll = true;
+            flowLayoutPanel3.FlowDirection = FlowDirection.LeftToRight;
+            flowLayoutPanel3.WrapContents = false;
+        }
+
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
             updateVerticalCards();
             updateHorizontalCards();
-
-
-
+            updatePaises();
             
-
-            List<Recomendaciones> recomendaciones = new List<Recomendaciones>();
-            recomendaciones.Add(new Recomendaciones("Argentina"));
-            recomendaciones.Add(new Recomendaciones("Brasil"));
-            recomendaciones.Add(new Recomendaciones("Chile"));
-            recomendaciones.Add(new Recomendaciones("Uruguay"));
-            recomendaciones.Add(new Recomendaciones("Colombia"));
-            flowLayoutPanel3.AutoScroll = true;
-            flowLayoutPanel3.FlowDirection = FlowDirection.LeftToRight;
-            flowLayoutPanel3.WrapContents = false;
-            foreach (Control control in recomendaciones)
-            {
-                flowLayoutPanel3.Controls.Add(control);
-            }
-
             Session.sessionListener += Session_Listener;
         }
 
@@ -163,6 +164,25 @@ namespace tpfinal
         {
             AlquilerForm alquiler = new AlquilerForm();
             alquiler.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Services.Usuario usuario = new Services.Usuario();
+            try
+            {
+                if (usuario.isLogged())
+                {
+                    AlquilerForm alquiler = new AlquilerForm();
+                    alquiler.ShowDialog();
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Error");
+                SignIn signIn = new SignIn();
+                signIn.ShowDialog();
+            }
         }
     }
 }
