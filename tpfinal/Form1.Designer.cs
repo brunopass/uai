@@ -81,7 +81,7 @@
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(571, 637);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(570, 367);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(536, 367);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // label1
@@ -199,7 +199,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(791, 30);
+            this.button1.Location = new System.Drawing.Point(796, 30);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 42);
             this.button1.TabIndex = 0;
@@ -215,7 +215,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(137)))));
-            this.button2.Location = new System.Drawing.Point(997, 28);
+            this.button2.Location = new System.Drawing.Point(1002, 28);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 44);
             this.button2.TabIndex = 1;
@@ -254,9 +254,9 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(0, -1);
+            this.panel4.Location = new System.Drawing.Point(-8, -1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1235, 450);
+            this.panel4.Size = new System.Drawing.Size(1240, 450);
             this.panel4.TabIndex = 7;
             // 
             // loggedTab
@@ -266,7 +266,7 @@
             this.loggedTab.Controls.Add(this.label13);
             this.loggedTab.Controls.Add(this.label12);
             this.loggedTab.Controls.Add(this.label11);
-            this.loggedTab.Location = new System.Drawing.Point(660, 12);
+            this.loggedTab.Location = new System.Drawing.Point(665, 12);
             this.loggedTab.Name = "loggedTab";
             this.loggedTab.Size = new System.Drawing.Size(537, 69);
             this.loggedTab.TabIndex = 4;
@@ -407,7 +407,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel3.Location = new System.Drawing.Point(297, 1240);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(835, 300);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(801, 300);
             this.flowLayoutPanel3.TabIndex = 1;
             // 
             // Dashboard

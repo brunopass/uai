@@ -90,5 +90,19 @@ namespace Services
 
             return casas;
         }
+
+        public List<string> traerPaises()
+        {
+            List<string> paises = new List<string>();
+
+            DataTable dataTable = database.Read("TraerPaises", null);
+
+            foreach(DataRow data in dataTable.Rows)
+            {
+                paises.Add(data["pais"].ToString());
+            }
+
+            return paises;
+        }
     }
 }

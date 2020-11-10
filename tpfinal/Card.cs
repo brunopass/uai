@@ -27,8 +27,7 @@ namespace tpfinal
             MemoryStream memoryStream = new MemoryStream(byteBuffer);
             Bitmap bitmap = new Bitmap(Bitmap.FromStream(memoryStream));
             pictureBox1.Image = bitmap;
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             
             List<star> starsList = new List<star>();
             for (int i = 0; i < stars; i++)

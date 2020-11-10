@@ -48,10 +48,10 @@
             // titulo
             // 
             this.titulo.AutoSize = true;
-            this.titulo.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.Location = new System.Drawing.Point(231, 51);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(117, 47);
+            this.titulo.Size = new System.Drawing.Size(93, 37);
             this.titulo.TabIndex = 1;
             this.titulo.Text = "Titulo";
             // 
@@ -59,7 +59,7 @@
             // 
             this.ambiente.AutoSize = true;
             this.ambiente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ambiente.Location = new System.Drawing.Point(239, 102);
+            this.ambiente.Location = new System.Drawing.Point(234, 88);
             this.ambiente.Name = "ambiente";
             this.ambiente.Size = new System.Drawing.Size(84, 21);
             this.ambiente.TabIndex = 2;
@@ -68,10 +68,10 @@
             // desripcion
             // 
             this.desripcion.AutoSize = true;
-            this.desripcion.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.desripcion.Location = new System.Drawing.Point(238, 132);
+            this.desripcion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.desripcion.Location = new System.Drawing.Point(234, 118);
             this.desripcion.Name = "desripcion";
-            this.desripcion.Size = new System.Drawing.Size(121, 30);
+            this.desripcion.Size = new System.Drawing.Size(91, 21);
             this.desripcion.TabIndex = 3;
             this.desripcion.Text = "Descripcion";
             // 
