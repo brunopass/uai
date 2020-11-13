@@ -32,7 +32,7 @@ namespace tpfinal
 
             foreach (Entities.Inmueble _inmueble in inmuebles)
             {
-                cards.Add(new Card(_inmueble.Uri,_inmueble.Title, _inmueble.Ubication, _inmueble.Description, _inmueble.Stars));
+                cards.Add(new Card(_inmueble.Id,_inmueble.Uri,_inmueble.Title, _inmueble.Ubication, _inmueble.Description, _inmueble.Stars));
             }
 
             flowLayoutPanel1.AutoScroll = true;
@@ -53,7 +53,7 @@ namespace tpfinal
 
             foreach (Entities.Inmueble _inmueble in inmuebles)
             {
-                cards.Add(new ImageCard(_inmueble.Uri, _inmueble.Title, _inmueble.Ubication, _inmueble.Stars));
+                cards.Add(new ImageCard(_inmueble.Id,_inmueble.Uri, _inmueble.Title, _inmueble.Ubication, _inmueble.Stars));
             }
             flowLayoutPanel2.AutoScroll = true;
             flowLayoutPanel2.FlowDirection = FlowDirection.LeftToRight;

@@ -13,10 +13,10 @@ namespace tpfinal
 {
     public partial class Card : UserControl
     {
-        
 
+        private string id;
 
-        public Card(string uri, string title, string ambientes, string description, int stars)
+        public Card(string id,string uri, string title, string ambientes, string description, int stars)
         {
             InitializeComponent();
             titulo.Text = title;
@@ -41,6 +41,13 @@ namespace tpfinal
             {
                 flowLayoutPanel1.Controls.Add(control);
             }
+            this.id = id;
+        }
+
+        private void open()
+        {
+            inmuebleView inmuebleView = new inmuebleView(id);
+            inmuebleView.ShowDialog();
         }
 
         private void Card_Load(object sender, EventArgs e)
@@ -56,6 +63,41 @@ namespace tpfinal
         private void Card_MouseLeave(object sender, EventArgs e)
         {
 
+        }
+
+        private void desripcion_Click(object sender, EventArgs e)
+        {
+            open();
+        }
+
+        private void Card_Click(object sender, EventArgs e)
+        {
+            open();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            open();
+        }
+
+        private void titulo_Click(object sender, EventArgs e)
+        {
+            open();
+        }
+
+        private void ambiente_Click(object sender, EventArgs e)
+        {
+            open();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Click(object sender, EventArgs e)
+        {
+            open();
         }
     }
 }

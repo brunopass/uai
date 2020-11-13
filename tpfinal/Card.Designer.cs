@@ -44,16 +44,17 @@
             this.pictureBox1.Size = new System.Drawing.Size(200, 200);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // titulo
             // 
-            this.titulo.AutoSize = true;
             this.titulo.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.Location = new System.Drawing.Point(231, 51);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(93, 37);
+            this.titulo.Size = new System.Drawing.Size(422, 37);
             this.titulo.TabIndex = 1;
             this.titulo.Text = "Titulo";
+            this.titulo.Click += new System.EventHandler(this.titulo_Click);
             // 
             // ambiente
             // 
@@ -61,19 +62,20 @@
             this.ambiente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ambiente.Location = new System.Drawing.Point(234, 88);
             this.ambiente.Name = "ambiente";
-            this.ambiente.Size = new System.Drawing.Size(84, 21);
+            this.ambiente.Size = new System.Drawing.Size(78, 21);
             this.ambiente.TabIndex = 2;
-            this.ambiente.Text = "Ambientes";
+            this.ambiente.Text = "Ubicacion";
+            this.ambiente.Click += new System.EventHandler(this.ambiente_Click);
             // 
             // desripcion
             // 
-            this.desripcion.AutoSize = true;
             this.desripcion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.desripcion.Location = new System.Drawing.Point(234, 118);
             this.desripcion.Name = "desripcion";
-            this.desripcion.Size = new System.Drawing.Size(91, 21);
+            this.desripcion.Size = new System.Drawing.Size(419, 106);
             this.desripcion.TabIndex = 3;
             this.desripcion.Text = "Descripcion";
+            this.desripcion.Click += new System.EventHandler(this.desripcion_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -81,6 +83,8 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(261, 30);
             this.flowLayoutPanel1.TabIndex = 4;
+            this.flowLayoutPanel1.Click += new System.EventHandler(this.flowLayoutPanel1_Click);
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // Card
             // 
@@ -97,6 +101,7 @@
             this.Name = "Card";
             this.Size = new System.Drawing.Size(698, 248);
             this.Load += new System.EventHandler(this.Card_Load);
+            this.Click += new System.EventHandler(this.Card_Click);
             this.MouseLeave += new System.EventHandler(this.Card_MouseLeave);
             this.MouseHover += new System.EventHandler(this.Card_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -22,3 +22,4 @@ C:\Users\bruno\source\repos\tpfinal\tpfinal\bin\Debug\Entities.pdb
 C:\Users\bruno\source\repos\tpfinal\tpfinal\bin\Debug\Services.pdb
 C:\Users\bruno\source\repos\tpfinal\tpfinal\bin\Debug\Data.pdb
 C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\Controllers.csproj.CopyComplete
+C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.inmuebleView.resources

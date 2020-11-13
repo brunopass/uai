@@ -44,6 +44,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -54,6 +55,7 @@
             this.label1.Size = new System.Drawing.Size(55, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Titulo";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -61,9 +63,10 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(9, 310);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.Size = new System.Drawing.Size(65, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Ambientes";
+            this.label2.Text = "Ubicacion";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -72,6 +75,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(214, 30);
             this.flowLayoutPanel1.TabIndex = 5;
+            this.flowLayoutPanel1.Click += new System.EventHandler(this.flowLayoutPanel1_Click);
             // 
             // ImageCard
             // 

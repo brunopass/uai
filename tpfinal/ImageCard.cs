@@ -13,7 +13,9 @@ namespace tpfinal
 {
     public partial class ImageCard : UserControl
     {
-        public ImageCard(string uri, string title, string ambientes,int stars)
+
+        private string id;
+        public ImageCard(string id,string uri, string title, string ambientes,int stars)
         {
             InitializeComponent();
             label1.Text = title;
@@ -36,11 +38,38 @@ namespace tpfinal
             {
                 flowLayoutPanel1.Controls.Add(control);
             }
+            this.id = id;
         }
 
         private void ImageCard_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void open()
+        {
+            inmuebleView inmuebleView = new inmuebleView(id);
+            inmuebleView.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            open();
+        }
+
+        private void flowLayoutPanel1_Click(object sender, EventArgs e)
+        {
+            open();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            open();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            open();
         }
     }
 }
