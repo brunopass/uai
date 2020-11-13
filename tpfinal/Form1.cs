@@ -26,13 +26,13 @@ namespace tpfinal
 
         private void updateVerticalCards()
         {
-            Services.Dashboard dashboard = new Services.Dashboard();
-            List<Casa> casas = dashboard.traerInmuebles();
+            Services.Inmueble inmueble = new Services.Inmueble();
+            List<Entities.Inmueble> inmuebles = inmueble.TraerInmuebles();
             List<Card> cards = new List<Card>();
 
-            foreach (Casa casa in casas)
+            foreach (Entities.Inmueble _inmueble in inmuebles)
             {
-                cards.Add(new Card(casa.Uri,casa.Titulo, casa.Ambientes, casa.Descripcion, casa.Estrellas));
+                cards.Add(new Card(_inmueble.Uri,_inmueble.Title, _inmueble.Ubication, _inmueble.Description, _inmueble.Stars));
             }
 
             flowLayoutPanel1.AutoScroll = true;
@@ -47,13 +47,13 @@ namespace tpfinal
 
         public void updateHorizontalCards()
         {
-            Services.Dashboard dashboard = new Services.Dashboard();
-            List<Casa> casas = dashboard.traerInmuebles();
+            Services.Inmueble inmueble = new Services.Inmueble();
+            List<Entities.Inmueble> inmuebles = inmueble.TraerInmuebles();
             List<ImageCard> cards = new List<ImageCard>();
 
-            foreach (Casa casa in casas)
+            foreach (Entities.Inmueble _inmueble in inmuebles)
             {
-                cards.Add(new ImageCard(casa.Uri,casa.Titulo, casa.Ambientes, casa.Estrellas));
+                cards.Add(new ImageCard(_inmueble.Uri, _inmueble.Title, _inmueble.Ubication, _inmueble.Stars));
             }
             flowLayoutPanel2.AutoScroll = true;
             flowLayoutPanel2.FlowDirection = FlowDirection.LeftToRight;
@@ -66,7 +66,7 @@ namespace tpfinal
 
         private void updatePaises()
         {
-            Services.Dashboard dashboard = new Services.Dashboard();
+            /*Services.Dashboard dashboard = new Services.Dashboard();
             List<Recomendaciones> recomendaciones = new List<Recomendaciones>();
             List<string> paises = dashboard.traerPaises();
             foreach(String p in paises)
@@ -79,7 +79,7 @@ namespace tpfinal
             }
             flowLayoutPanel3.AutoScroll = true;
             flowLayoutPanel3.FlowDirection = FlowDirection.LeftToRight;
-            flowLayoutPanel3.WrapContents = false;
+            flowLayoutPanel3.WrapContents = false;*/
         }
 
 
@@ -87,7 +87,7 @@ namespace tpfinal
         {
             updateVerticalCards();
             updateHorizontalCards();
-            updatePaises();
+            //updatePaises();
             
             Session.sessionListener += Session_Listener;
         }
@@ -183,6 +183,11 @@ namespace tpfinal
                 SignIn signIn = new SignIn();
                 signIn.ShowDialog();
             }
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -40,7 +40,7 @@ namespace tpfinal
 
         private void AlquilerForm_Load(object sender, EventArgs e)
         {
-            Services.Dashboard dashboard = new Services.Dashboard();
+            /*Services.Dashboard dashboard = new Services.Dashboard();
             try
             {
                 ubicacion.Items.AddRange(dashboard.traerPaises().ToArray());
@@ -49,6 +49,7 @@ namespace tpfinal
             {
                 MessageBox.Show(error.Message);
             }
+            */
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

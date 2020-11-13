@@ -39,5 +39,21 @@ namespace Services
                 throw new Exception(error.Message);
             }
         }
+
+        public List<Entities.Inmueble> TraerInmuebles()
+        {
+            Data.Inmueble inmueble = new Data.Inmueble();
+            try
+            {
+                List<Entities.Inmueble> inmuebles = inmueble.TraerInmuebles();
+                return inmuebles;
+
+            }
+            catch(Exception error)
+            {
+                throw new Exception(error.Message);
+            }
+            
+        }
     }
 }

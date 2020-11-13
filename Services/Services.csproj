@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.cs" />
     <Compile Include="Inmueble.cs" />
     <Compile Include="Security.cs" />
     <Compile Include="Usuario.cs" />
