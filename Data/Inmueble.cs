@@ -15,6 +15,7 @@ namespace Data
             SqlParameter[] parameters =
             {
                 new SqlParameter("@id", inmueble.Id),
+                new SqlParameter("@id_usuario", Entities.Session._id),
                 new SqlParameter("@titulo", inmueble.Title),
                 new SqlParameter("@descripcion", inmueble.Description),
                 new SqlParameter("@direccion", inmueble.Address),
@@ -77,7 +78,7 @@ namespace Data
                 {
                     paises.Add(data["pais"].ToString());
                 }
-                return paises
+                return paises;
             }
             catch(Exception error)
             {

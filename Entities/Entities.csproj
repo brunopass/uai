@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Casa.cs" />
     <Compile Include="Comentario.cs" />
     <Compile Include="Inmueble.cs" />
     <Compile Include="Session.cs" />

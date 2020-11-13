@@ -40,16 +40,16 @@ namespace tpfinal
 
         private void AlquilerForm_Load(object sender, EventArgs e)
         {
-            /*Services.Dashboard dashboard = new Services.Dashboard();
+            Services.Inmueble inmueble = new Services.Inmueble();
             try
             {
-                ubicacion.Items.AddRange(dashboard.traerPaises().ToArray());
+                ubicacion.Items.AddRange(inmueble.TraerPaises().ToArray());
             }
             catch(Exception error)
             {
                 MessageBox.Show(error.Message);
             }
-            */
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

@@ -57,7 +57,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,7 +67,7 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(297, 1729);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(297, 1428);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(903, 323);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -200,7 +199,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(779, 30);
+            this.button1.Location = new System.Drawing.Point(801, 30);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 42);
             this.button1.TabIndex = 0;
@@ -216,7 +215,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(137)))));
-            this.button2.Location = new System.Drawing.Point(985, 28);
+            this.button2.Location = new System.Drawing.Point(1007, 28);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 44);
             this.button2.TabIndex = 1;
@@ -257,7 +256,7 @@
             this.panel4.Controls.Add(this.button1);
             this.panel4.Location = new System.Drawing.Point(-8, -1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1223, 450);
+            this.panel4.Size = new System.Drawing.Size(1245, 450);
             this.panel4.TabIndex = 7;
             // 
             // loggedTab
@@ -267,7 +266,7 @@
             this.loggedTab.Controls.Add(this.label13);
             this.loggedTab.Controls.Add(this.label12);
             this.loggedTab.Controls.Add(this.label11);
-            this.loggedTab.Location = new System.Drawing.Point(648, 12);
+            this.loggedTab.Location = new System.Drawing.Point(670, 12);
             this.loggedTab.Name = "loggedTab";
             this.loggedTab.Size = new System.Drawing.Size(537, 69);
             this.loggedTab.TabIndex = 4;
@@ -332,7 +331,7 @@
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(297, 1556);
+            this.panel1.Location = new System.Drawing.Point(297, 1255);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(700, 156);
             this.panel1.TabIndex = 8;
@@ -403,15 +402,6 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Te presentamos lugares que quizás te interesen :)";
             // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(297, 1240);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(784, 300);
-            this.flowLayoutPanel3.TabIndex = 1;
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,7 +409,6 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1230, 783);
-            this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel1);
@@ -474,7 +463,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Panel loggedTab;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
