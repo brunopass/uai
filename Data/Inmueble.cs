@@ -66,6 +66,37 @@ namespace Data
             }
         }
 
+        public Entities.Inmueble TraerInmueblePorId(string id)
+        {
+            Database database = new Database();
+            List<Entities.Inmueble> inmuebles = new List<Entities.Inmueble>();
+            SqlParameter[] parameters = { new SqlParameter("@id", id)};
+            try
+            {
+                DataTable dataTable = database.Read("TraerInmueblePorId", parameters);
+                foreach (DataRow data in dataTable.Rows)
+                {
+                    inmuebles.Add(
+                            new Entities.Inmueble(
+                                    data["id"].ToString(),
+                                    data["titulo"].ToString(),
+                                    data["descripcion"].ToString(),
+                                    data["direccion"].ToString(),
+                                    data["ubicacion"].ToString(),
+                                    float.Parse(data["precio"].ToString()),
+                                    data["uri"].ToString()
+                                )
+                        );
+                }
+
+                return inmuebles[0];
+            }
+            catch (Exception error)
+            {
+                throw new Exception(error.Message);
+            }
+        }
+
         public List<string> TraerPaises()
         {
             Database database = new Database();

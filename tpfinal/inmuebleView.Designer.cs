@@ -40,9 +40,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.titulo = new System.Windows.Forms.Label();
+            this.descripcion = new System.Windows.Forms.Label();
+            this.ubicacion = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
@@ -171,54 +171,54 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Location = new System.Drawing.Point(235, 157);
+            this.pictureBox2.Location = new System.Drawing.Point(250, 156);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(350, 350);
+            this.pictureBox2.Size = new System.Drawing.Size(300, 300);
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(605, 157);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(594, 238);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(261, 30);
             this.flowLayoutPanel1.TabIndex = 11;
             // 
-            // label6
+            // titulo
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
-            this.label6.Location = new System.Drawing.Point(599, 190);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 37);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Titulo";
+            this.titulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.titulo.AutoSize = true;
+            this.titulo.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
+            this.titulo.Location = new System.Drawing.Point(587, 156);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(93, 37);
+            this.titulo.TabIndex = 20;
+            this.titulo.Text = "Titulo";
             // 
-            // label4
+            // descripcion
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(117)))), ((int)(((byte)(127)))));
-            this.label4.Location = new System.Drawing.Point(602, 272);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(500, 138);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "descripcion";
+            this.descripcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.descripcion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(117)))), ((int)(((byte)(127)))));
+            this.descripcion.Location = new System.Drawing.Point(590, 271);
+            this.descripcion.Name = "descripcion";
+            this.descripcion.Size = new System.Drawing.Size(413, 138);
+            this.descripcion.TabIndex = 22;
+            this.descripcion.Text = "descripcion";
             // 
-            // label1
+            // ubicacion
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
-            this.label1.Location = new System.Drawing.Point(602, 238);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 21);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Ubicacion";
+            this.ubicacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ubicacion.AutoSize = true;
+            this.ubicacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ubicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
+            this.ubicacion.Location = new System.Drawing.Point(590, 204);
+            this.ubicacion.Name = "ubicacion";
+            this.ubicacion.Size = new System.Drawing.Size(78, 21);
+            this.ubicacion.TabIndex = 23;
+            this.ubicacion.Text = "Ubicacion";
             // 
             // button3
             // 
@@ -228,7 +228,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.Location = new System.Drawing.Point(596, 461);
+            this.button3.Location = new System.Drawing.Point(584, 460);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(189, 43);
             this.button3.TabIndex = 24;
@@ -244,7 +244,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(137)))));
-            this.button4.Location = new System.Drawing.Point(791, 462);
+            this.button4.Location = new System.Drawing.Point(779, 461);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(189, 42);
             this.button4.TabIndex = 25;
@@ -260,9 +260,9 @@
             this.ClientSize = new System.Drawing.Size(1223, 646);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.ubicacion);
+            this.Controls.Add(this.descripcion);
+            this.Controls.Add(this.titulo);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel4);
@@ -293,9 +293,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label titulo;
+        private System.Windows.Forms.Label descripcion;
+        private System.Windows.Forms.Label ubicacion;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
     }

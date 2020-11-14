@@ -66,5 +66,19 @@ namespace Services
                 throw new Exception(error.Message);
             }
         }
+
+        public Entities.Inmueble TraerInmueblePorId(string id)
+        {
+            Data.Inmueble inmueble = new Data.Inmueble();
+
+            try
+            {
+                return inmueble.TraerInmueblePorId(id);
+            }
+            catch(Exception error)
+            {
+                throw new Exception(error.Message);
+            }
+        }
     }
 }

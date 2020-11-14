@@ -20,11 +20,13 @@ namespace tpfinal
             InitializeComponent();
             label1.Text = title;
             label2.Text = ambientes;
-            List<star> starsList = new List<star>();
+            
             byte[] imageBytes = Convert.FromBase64String(uri);
             MemoryStream memoryStream = new MemoryStream(imageBytes);
             pictureBox1.InitialImage = null;
             pictureBox1.Image = Image.FromStream(memoryStream);
+
+            List<star> starsList = new List<star>();
             for (int i = 0; i < stars; i++)
             {
                 star s = new star();
