@@ -46,8 +46,7 @@ namespace Data
                 DataTable dataTable = database.Read("TraerInmuebles", null);
                 foreach(DataRow data in dataTable.Rows)
                 {
-                    inmuebles.Add(
-                            new Entities.Inmueble(
+                    Entities.Inmueble _inmueble = new Entities.Inmueble(
                                     data["id"].ToString(),
                                     data["titulo"].ToString(),
                                     data["descripcion"].ToString(),
@@ -55,8 +54,9 @@ namespace Data
                                     data["ubicacion"].ToString(),
                                     float.Parse(data["precio"].ToString()),
                                     data["uri"].ToString()
-                                )
-                        );
+                                );
+
+                    inmuebles.Add(_inmueble);
                 }
 
                 return inmuebles;
@@ -70,14 +70,17 @@ namespace Data
         {
             Database database = new Database();
             List<Entities.Inmueble> inmuebles = new List<Entities.Inmueble>();
+            List<float> promedios = new List<float>();
+
             SqlParameter[] parameters = { new SqlParameter("@id", id)};
+
             try
             {
-                DataTable dataTable = database.Read("TraerInmueblePorId", parameters);
+                DataTable dataTable = database.Read("TraerInmueblesPorId", parameters);
                 foreach (DataRow data in dataTable.Rows)
                 {
-                    inmuebles.Add(
-                            new Entities.Inmueble(
+
+                    Entities.Inmueble _inmueble = new Entities.Inmueble(
                                     data["id"].ToString(),
                                     data["titulo"].ToString(),
                                     data["descripcion"].ToString(),
@@ -85,11 +88,21 @@ namespace Data
                                     data["ubicacion"].ToString(),
                                     float.Parse(data["precio"].ToString()),
                                     data["uri"].ToString()
-                                )
-                        );
+                                );
+
+                    if (data["promedio"].ToString() == "")
+                    {
+                        _inmueble.Stars = (int) Math.Round(float.Parse("0"));
+                    }
+                    else
+                    {
+                        _inmueble.Stars = int.Parse(data["promedio"].ToString());
+                    }
+                    inmuebles.Add(_inmueble);
+                        
                 }
 
-                return inmuebles[0];
+                    return inmuebles[0];
             }
             catch (Exception error)
             {
