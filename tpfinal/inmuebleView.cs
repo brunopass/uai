@@ -26,7 +26,7 @@ namespace tpfinal
                 pictureBox2.Image = bitmap;
                 pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
                 titulo.Text = inmueble.Title;
-                ubicacion.Text = inmueble.Ubication + " " + inmueble.Address;
+                ubicacion.Text = inmueble.Ubication + " - " + inmueble.Address;
                 descripcion.Text = inmueble.Description;
 
                 List<star> starsList = new List<star>();
