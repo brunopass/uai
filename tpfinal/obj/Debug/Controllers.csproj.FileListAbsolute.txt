@@ -24,3 +24,5 @@ C:\Users\bruno\source\repos\tpfinal\tpfinal\bin\Debug\Data.pdb
 C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\Controllers.csproj.CopyComplete
 C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.inmuebleView.resources
 C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.Comentario.resources
+C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.Favoritos.resources
+C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.MisAlquileres.resources

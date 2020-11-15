@@ -64,6 +64,12 @@
     <Compile Include="Comentario.Designer.cs">
       <DependentUpon>Comentario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Favoritos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Favoritos.Designer.cs">
+      <DependentUpon>Favoritos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MisAlquileres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MisAlquileres.Designer.cs">
+      <DependentUpon>MisAlquileres.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,6 +129,9 @@
     <EmbeddedResource Include="Comentario.resx">
       <DependentUpon>Comentario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Favoritos.resx">
+      <DependentUpon>Favoritos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MisAlquileres.resx">
+      <DependentUpon>MisAlquileres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

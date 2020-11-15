@@ -71,7 +71,7 @@
             this.panel4.Controls.Add(this.button1);
             this.panel4.Location = new System.Drawing.Point(-8, -3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1223, 92);
+            this.panel4.Size = new System.Drawing.Size(1238, 92);
             this.panel4.TabIndex = 9;
             // 
             // loggedTab
@@ -81,7 +81,7 @@
             this.loggedTab.Controls.Add(this.label14);
             this.loggedTab.Controls.Add(this.label12);
             this.loggedTab.Controls.Add(this.label11);
-            this.loggedTab.Location = new System.Drawing.Point(648, 15);
+            this.loggedTab.Location = new System.Drawing.Point(663, 15);
             this.loggedTab.Name = "loggedTab";
             this.loggedTab.Size = new System.Drawing.Size(537, 69);
             this.loggedTab.TabIndex = 4;
@@ -111,6 +111,7 @@
             this.label12.Size = new System.Drawing.Size(108, 21);
             this.label12.TabIndex = 1;
             this.label12.Text = "Mis Alquileres";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label11
             // 
@@ -143,7 +144,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(137)))));
-            this.button2.Location = new System.Drawing.Point(985, 28);
+            this.button2.Location = new System.Drawing.Point(1000, 28);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 44);
             this.button2.TabIndex = 1;
@@ -159,7 +160,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(779, 30);
+            this.button1.Location = new System.Drawing.Point(794, 30);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 42);
             this.button1.TabIndex = 0;
@@ -355,6 +356,7 @@
             this.label13.Size = new System.Drawing.Size(73, 21);
             this.label13.TabIndex = 4;
             this.label13.Text = "Favoritos";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // inmuebleView
             // 

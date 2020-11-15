@@ -284,6 +284,7 @@
             this.label13.Size = new System.Drawing.Size(73, 21);
             this.label13.TabIndex = 2;
             this.label13.Text = "Favoritos";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label12
             // 
