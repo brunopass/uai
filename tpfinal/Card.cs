@@ -44,7 +44,7 @@ namespace tpfinal
 
             if (isFav)
             {
-
+                pictureBox2.Visible = true;
             }
 
             this.id = id;
@@ -104,6 +104,20 @@ namespace tpfinal
         private void flowLayoutPanel1_Click(object sender, EventArgs e)
         {
             open();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Services.Inmueble inmueble = new Services.Inmueble();
+            try
+            {
+                string msg = inmueble.BorrarFavoritos(id);
+                this.Hide();
+                MessageBox.Show(msg);
+            }catch(Exception error)
+            {
+                MessageBox.Show(error.Message, "Erro");
+            }
         }
     }
 }

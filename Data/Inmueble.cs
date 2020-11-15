@@ -247,5 +247,24 @@ namespace Data
                 throw new Exception(error.Message);
             }
         }
+
+        public string BorrarFavoritos(string id, string id_usuario)
+        {
+            Database database = new Database();
+            SqlParameter[] parameters = {
+                new SqlParameter("@id", id) ,
+                new SqlParameter("@id_usuario", id_usuario)
+            };
+
+            try
+            {
+                database.Write("BorrarFavoritos", parameters);
+                return "eliminado de favoritos";
+            }
+            catch(Exception error)
+            {
+                throw new Exception(error.Message);
+            }
+        }
     }
 }

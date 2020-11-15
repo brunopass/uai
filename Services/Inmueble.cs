@@ -150,5 +150,19 @@ namespace Services
                 throw new Exception(error.Message);
             }
         }
+
+        public string BorrarFavoritos(string id)
+        {
+            if (!usuario.isLogged()) throw new Exception("Es necesario estar loggeado");
+            Data.Inmueble inmueble = new Data.Inmueble();
+            try
+            {
+                return inmueble.BorrarFavoritos(id, Entities.Session._id);
+            }
+            catch(Exception error)
+            {
+                throw new Exception(error.Message);
+            }
+        }
     }
 }
