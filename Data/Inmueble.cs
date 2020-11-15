@@ -55,7 +55,14 @@ namespace Data
                                     float.Parse(data["precio"].ToString()),
                                     data["uri"].ToString()
                                 );
-
+                    if (data["promedio"].ToString() == "")
+                    {
+                        _inmueble.Stars = (int)Math.Round(float.Parse("0"));
+                    }
+                    else
+                    {
+                        _inmueble.Stars = (int)Math.Round(float.Parse(data["promedio"].ToString()));
+                    }
                     inmuebles.Add(_inmueble);
                 }
 
@@ -96,7 +103,7 @@ namespace Data
                     }
                     else
                     {
-                        _inmueble.Stars = int.Parse(data["promedio"].ToString());
+                        _inmueble.Stars = (int)Math.Round(float.Parse(data["promedio"].ToString()));
                     }
                     inmuebles.Add(_inmueble);
                         
@@ -123,6 +130,26 @@ namespace Data
                     paises.Add(data["pais"].ToString());
                 }
                 return paises;
+            }
+            catch(Exception error)
+            {
+                throw new Exception(error.Message);
+            }
+        }
+
+        public string AgregarFavoritos(string id, string id_inmueble, string hash_usuario)
+        {
+            Database database = new Database();
+            try
+            {
+                SqlParameter[] parameters = {
+                    new SqlParameter("@id", id),
+                    new SqlParameter("@id_usuario", hash_usuario),
+                    new SqlParameter("@id_inmueble", id_inmueble)
+                };
+
+                database.Write("AgregarFavoritos", parameters);
+                return "Inmueble agregado a favoritos";
             }
             catch(Exception error)
             {

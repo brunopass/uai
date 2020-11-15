@@ -64,30 +64,11 @@ namespace tpfinal
             }
         }
 
-        private void updatePaises()
-        {
-            /*Services.Dashboard dashboard = new Services.Dashboard();
-            List<Recomendaciones> recomendaciones = new List<Recomendaciones>();
-            List<string> paises = dashboard.traerPaises();
-            foreach(String p in paises)
-            {
-                recomendaciones.Add(new Recomendaciones(p));
-            }
-            foreach (Control control in recomendaciones)
-            {
-                flowLayoutPanel3.Controls.Add(control);
-            }
-            flowLayoutPanel3.AutoScroll = true;
-            flowLayoutPanel3.FlowDirection = FlowDirection.LeftToRight;
-            flowLayoutPanel3.WrapContents = false;*/
-        }
-
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
             updateVerticalCards();
             updateHorizontalCards();
-            //updatePaises();
             
             Session.sessionListener += Session_Listener;
         }

@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Services;
+using Entities;
 
 namespace tpfinal
 {
     public partial class inmuebleView : Form
     {
+        private string _id;
         public inmuebleView(string _id)
         {
             InitializeComponent();
@@ -43,6 +46,7 @@ namespace tpfinal
                 {
                     flowLayoutPanel1.Controls.Add(control);
                 }
+                this._id = _id;
             }
             catch(Exception error)
             {
@@ -52,7 +56,44 @@ namespace tpfinal
 
         private void inmuebleView_Load(object sender, EventArgs e)
         {
+            Entities.Session.sessionListener += Session_Listener;
+            Services.Usuario usuario = new Services.Usuario();
+            try
+            {
 
+            if (usuario.isLogged())
+            {
+                loggedTab.Visible = true;
+                button1.Visible = false;
+                button2.Visible = false;
+            }
+            else
+            {
+                loggedTab.Visible = false;
+                button1.Visible = true;
+                button2.Visible = true;
+            }
+            }
+            catch(Exception error)
+            {
+                
+            }
+        }
+
+        private void Session_Listener(bool isLogged)
+        {
+            if (isLogged)
+            {
+                loggedTab.Visible = true;
+                button1.Visible = false;
+                button2.Visible = false;
+            }
+            else
+            {
+                loggedTab.Visible = false;
+                button1.Visible = true;
+                button2.Visible = true;
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -68,6 +109,32 @@ namespace tpfinal
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Services.Inmueble inmueble = new Services.Inmueble();
+            try
+            {
+                string msg = inmueble.AgregarFavoritos(_id);
+                MessageBox.Show(msg);
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show(error.Message, "Error");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CrearCuenta crearCuenta = new CrearCuenta();
+            crearCuenta.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SignIn signIn = new SignIn();
+            signIn.ShowDialog();
         }
     }
 }

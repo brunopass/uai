@@ -10,11 +10,13 @@ namespace Entities
     {
         private string _id;
         private string value;
+        private int calificacion;
 
-        public Comentario(string _id, string value)
+        public Comentario(string _id, string value, int calificacion)
         {
             this._id = _id;
             this.value = value;
+            this.calificacion = calificacion;
         }
 
         public string Id
@@ -25,6 +27,11 @@ namespace Entities
         public string Value
         {
             get { return value; }
+        }
+
+        public int Calificacion
+        {
+            get { return calificacion; }
         }
     }
 }
