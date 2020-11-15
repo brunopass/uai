@@ -32,7 +32,7 @@ namespace tpfinal
 
             foreach (Entities.Inmueble _inmueble in inmuebles)
             {
-                cards.Add(new Card(_inmueble.Id,_inmueble.Uri,_inmueble.Title, _inmueble.Ubication, _inmueble.Description, _inmueble.Stars));
+                cards.Add(new Card(_inmueble.Id,_inmueble.Uri,_inmueble.Title, _inmueble.Ubication, _inmueble.Description, _inmueble.Stars,false));
             }
 
             flowLayoutPanel1.AutoScroll = true;

@@ -16,7 +16,7 @@ namespace tpfinal
 
         private string id;
 
-        public Card(string id,string uri, string title, string ambientes, string description, int stars)
+        public Card(string id,string uri, string title, string ambientes, string description, int stars, bool isFav)
         {
             InitializeComponent();
             titulo.Text = title;
@@ -41,6 +41,12 @@ namespace tpfinal
             {
                 flowLayoutPanel1.Controls.Add(control);
             }
+
+            if (isFav)
+            {
+
+            }
+
             this.id = id;
         }
 
