@@ -50,9 +50,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comentario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.calificacion = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
             this.loggedTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -98,6 +98,7 @@
             this.label14.Size = new System.Drawing.Size(104, 21);
             this.label14.TabIndex = 3;
             this.label14.Text = "Cerrar Sesión";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label13
             // 
@@ -287,10 +288,10 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.calificacion);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.comentario);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(234, 543);
             this.panel1.Name = "panel1";
@@ -311,6 +312,7 @@
             this.button5.TabIndex = 29;
             this.button5.Text = "Enviar comentario";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label3
             // 
@@ -324,13 +326,13 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Calificacion";
             // 
-            // textBox1
+            // comentario
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 55);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(672, 82);
-            this.textBox1.TabIndex = 30;
+            this.comentario.Location = new System.Drawing.Point(26, 55);
+            this.comentario.Multiline = true;
+            this.comentario.Name = "comentario";
+            this.comentario.Size = new System.Drawing.Size(672, 82);
+            this.comentario.TabIndex = 30;
             // 
             // label2
             // 
@@ -344,14 +346,15 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "Escribir un comentario";
             // 
-            // comboBox1
+            // calificacion
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(26, 179);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(130, 38);
-            this.comboBox1.TabIndex = 32;
+            this.calificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.calificacion.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calificacion.FormattingEnabled = true;
+            this.calificacion.Location = new System.Drawing.Point(26, 179);
+            this.calificacion.Name = "calificacion";
+            this.calificacion.Size = new System.Drawing.Size(130, 38);
+            this.calificacion.TabIndex = 32;
             // 
             // inmuebleView
             // 
@@ -410,8 +413,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox comentario;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox calificacion;
     }
 }

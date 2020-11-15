@@ -123,5 +123,18 @@ namespace Services
                 throw new Exception(error.Message);
             }
         }
+
+        public List<Entities.Comentario> TraerComentarios(string id)
+        {
+            Data.Inmueble inmueble = new Data.Inmueble();
+            try
+            {
+                return inmueble.TraerComentarios(id);
+            }
+            catch (Exception error)
+            {
+                throw new Exception(error.Message);
+            }
+        }
     }
 }

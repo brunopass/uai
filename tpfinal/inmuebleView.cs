@@ -56,23 +56,25 @@ namespace tpfinal
 
         private void inmuebleView_Load(object sender, EventArgs e)
         {
+            string[] calificaciones = {"1","2","3","4","5"};
+            calificacion.Items.AddRange(calificaciones);
             Entities.Session.sessionListener += Session_Listener;
             Services.Usuario usuario = new Services.Usuario();
             try
             {
 
-            if (usuario.isLogged())
-            {
-                loggedTab.Visible = true;
-                button1.Visible = false;
-                button2.Visible = false;
-            }
-            else
-            {
-                loggedTab.Visible = false;
-                button1.Visible = true;
-                button2.Visible = true;
-            }
+                if (usuario.isLogged())
+                {
+                    loggedTab.Visible = true;
+                    button1.Visible = false;
+                    button2.Visible = false;
+                }
+                else
+                {
+                    loggedTab.Visible = false;
+                    button1.Visible = true;
+                    button2.Visible = true;
+                }
             }
             catch(Exception error)
             {
@@ -135,6 +137,35 @@ namespace tpfinal
         {
             SignIn signIn = new SignIn();
             signIn.ShowDialog();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            Services.Usuario usuario = new Services.Usuario();
+            try
+            {
+                string msg = usuario.CerrarSesion();
+                MessageBox.Show(msg);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Error");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Services.Inmueble inmueble = new Services.Inmueble();
+
+            try
+            {
+                string msg = inmueble.AgregarComentario(new Entities.Comentario(_id, comentario.Text, int.Parse(calificacion.Text)));
+                MessageBox.Show(msg);
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show(error.Message, "Error");
+            }
         }
     }
 }

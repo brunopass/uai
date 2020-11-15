@@ -156,5 +156,59 @@ namespace Data
                 throw new Exception(error.Message);
             }
         }
+
+        public string AgregarComentario(Entities.Comentario comentario)
+        {
+            Database database = new Database();
+            try
+            {
+                SqlParameter[] parameters = { 
+                    new SqlParameter("@id", Guid.NewGuid().ToString()),
+                    new SqlParameter("@id_inmueble", comentario.Id),
+                    new SqlParameter("@id_usuario", Entities.Session._id),
+                    new SqlParameter("@comentario", comentario.Value),
+                    new SqlParameter("@calificacion", comentario.Calificacion)
+                };
+
+                database.Write("AgregarComentario", parameters);
+                return "Comentario creado";
+            }
+            catch(Exception error)
+            {
+                throw new Exception(error.Message);
+            }
+        }
+
+        public List<Entities.Comentario> TraerComentarios(string id)
+        {
+            Database database = new Database();
+            List<Entities.Comentario> comentarios = new List<Entities.Comentario>();
+            try
+            {
+                SqlParameter[] parameters = {
+                    new SqlParameter("@id", id),
+                };
+
+                DataTable dataTable = database.Read("TraerComentarios", parameters);
+
+
+                foreach(DataRow data in dataTable.Rows)
+                {
+                    comentarios.Add(
+                            new Entities.Comentario(
+                                    data["id"].ToString(),
+                                    data["comentario"].ToString(),
+                                    int.Parse(data["calificacion"].ToString())
+                                )
+                        );
+                }
+
+                return comentarios;
+            }
+            catch (Exception error)
+            {
+                throw new Exception(error.Message);
+            }
+        }
     }
 }

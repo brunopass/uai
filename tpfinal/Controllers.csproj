@@ -58,6 +58,12 @@
     <Compile Include="Card.Designer.cs">
       <DependentUpon>Card.cs</DependentUpon>
     </Compile>
+    <Compile Include="Comentario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Comentario.Designer.cs">
+      <DependentUpon>Comentario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Card.resx">
       <DependentUpon>Card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comentario.resx">
+      <DependentUpon>Comentario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
