@@ -32,7 +32,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.loggedTab = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,6 +52,7 @@
             this.comentario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.calificacion = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.loggedTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,8 +77,8 @@
             // loggedTab
             // 
             this.loggedTab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.loggedTab.Controls.Add(this.label14);
             this.loggedTab.Controls.Add(this.label13);
+            this.loggedTab.Controls.Add(this.label14);
             this.loggedTab.Controls.Add(this.label12);
             this.loggedTab.Controls.Add(this.label11);
             this.loggedTab.Location = new System.Drawing.Point(648, 15);
@@ -99,18 +99,6 @@
             this.label14.TabIndex = 3;
             this.label14.Text = "Cerrar Sesión";
             this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(310, 27);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(101, 21);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Mis Reservas";
             // 
             // label12
             // 
@@ -279,9 +267,9 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(234, 804);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(232, 804);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(720, 88);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(756, 88);
             this.flowLayoutPanel2.TabIndex = 27;
             // 
             // panel1
@@ -356,6 +344,18 @@
             this.calificacion.Size = new System.Drawing.Size(130, 38);
             this.calificacion.TabIndex = 32;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(319, 27);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(73, 21);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Favoritos";
+            // 
             // inmuebleView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,7 +395,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel loggedTab;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -416,5 +415,6 @@
         private System.Windows.Forms.TextBox comentario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox calificacion;
+        private System.Windows.Forms.Label label13;
     }
 }

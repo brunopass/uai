@@ -80,6 +80,33 @@ namespace tpfinal
             {
                 
             }
+
+            try
+            {
+                Services.Inmueble inmueble = new Services.Inmueble();
+                List<Entities.Comentario> comentarios = inmueble.TraerComentarios(_id);
+
+                List<Comentario> componentesComentario = new List<Comentario>();
+
+                foreach (Entities.Comentario _comentario in comentarios)
+                {
+                    componentesComentario.Add(new Comentario(_comentario));
+                }
+
+                flowLayoutPanel2.AutoScroll = true;
+                flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
+                flowLayoutPanel2.WrapContents = false;
+                flowLayoutPanel2.Height = comentarios.Count * 160;
+                foreach (Control control in componentesComentario)
+                {
+                    flowLayoutPanel2.Controls.Add(control);
+                }
+                
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show(error.Message, "Error");
+            }
         }
 
         private void Session_Listener(bool isLogged)
