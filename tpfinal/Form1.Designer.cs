@@ -37,6 +37,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,7 +60,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,7 +84,7 @@
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(571, 637);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(434, 367);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(417, 367);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // label1
@@ -158,6 +158,20 @@
             this.panel3.Size = new System.Drawing.Size(250, 254);
             this.panel3.TabIndex = 5;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(117)))), ((int)(((byte)(127)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(23, 188);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(200, 44);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Buscar Alojamiento";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -188,7 +202,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(803, 30);
+            this.button1.Location = new System.Drawing.Point(786, 30);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 42);
             this.button1.TabIndex = 0;
@@ -204,7 +218,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(137)))));
-            this.button2.Location = new System.Drawing.Point(1009, 28);
+            this.button2.Location = new System.Drawing.Point(992, 28);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 44);
             this.button2.TabIndex = 1;
@@ -246,7 +260,7 @@
             this.panel4.Controls.Add(this.button1);
             this.panel4.Location = new System.Drawing.Point(-8, -1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1247, 450);
+            this.panel4.Size = new System.Drawing.Size(1230, 450);
             this.panel4.TabIndex = 7;
             // 
             // panel5
@@ -288,7 +302,7 @@
             this.loggedTab.Controls.Add(this.label13);
             this.loggedTab.Controls.Add(this.label12);
             this.loggedTab.Controls.Add(this.label11);
-            this.loggedTab.Location = new System.Drawing.Point(672, 12);
+            this.loggedTab.Location = new System.Drawing.Point(655, 12);
             this.loggedTab.Name = "loggedTab";
             this.loggedTab.Size = new System.Drawing.Size(537, 69);
             this.loggedTab.TabIndex = 4;
@@ -424,20 +438,6 @@
             this.label10.Size = new System.Drawing.Size(494, 30);
             this.label10.TabIndex = 21;
             this.label10.Text = "Te presentamos lugares que quizás te interesen :)";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(117)))), ((int)(((byte)(127)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(23, 188);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 44);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Buscar Alojamiento";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
