@@ -43,6 +43,7 @@ namespace Services
             try
             {
                 MailAddress mail = new MailAddress(email);
+                
             }
             catch
             {
@@ -68,6 +69,7 @@ namespace Services
 
             string hash = Guid.NewGuid().ToString();
             string passphrase = security.SHA256(password);
+
             Entities.Usuario usuario = new Entities.Usuario(email, passphrase);
             usuario.Nombre = nombre;
             usuario.Hash = hash;
@@ -94,19 +96,18 @@ namespace Services
             {
                 throw new Exception(error.Message);
             }
+
             string passphrase = security.SHA256(password);
             Entities.Usuario usuario = new Entities.Usuario(email, passphrase);
+
             try
             {
                 Data.User user = new User();
                 DataTable dataTable = user.SignIn(usuario);
 
-                foreach(DataRow data in dataTable.Rows)
-                {
-                    Session.join(data["hash"].ToString());
-                }
+                Session.join(dataTable.Rows[0]["hash"].ToString());
 
-                if(Session._id == "" || Session._id == null)
+                if(String.IsNullOrEmpty(Session._id))
                 {
                     throw new Exception("Error Al iniciar Sesión");
                 }
@@ -118,7 +119,7 @@ namespace Services
                 throw new Exception("Error Al iniciar Sesión");
             }
         }
-
+        
         public string CerrarSesion()
         {
             try
