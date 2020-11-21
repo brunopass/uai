@@ -26,3 +26,4 @@ C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.inmuebleView.resou
 C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.Comentario.resources
 C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.Favoritos.resources
 C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.MisAlquileres.resources
+C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.Search.resources
