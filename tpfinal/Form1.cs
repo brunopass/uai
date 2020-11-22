@@ -35,7 +35,7 @@ namespace tpfinal
                 cards.Add(new Card(_inmueble.Id,_inmueble.Uri,_inmueble.Title, _inmueble.Ubication, _inmueble.Description, _inmueble.Stars,false));
             }
 
-            flowLayoutPanel2.Controls.Clear();
+            flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.WrapContents = false;
