@@ -73,7 +73,7 @@ namespace Data
             }
         }
 
-        public Entities.Inmueble TraerInmueblePorId(string id)
+        public Entities.Inmueble TraerInmuebles(string id)
         {
             Database database = new Database();
             List<Entities.Inmueble> inmuebles = new List<Entities.Inmueble>();
@@ -109,6 +109,49 @@ namespace Data
                 }
 
                     return inmuebles[0];
+            }
+            catch (Exception error)
+            {
+                throw new Exception(error.Message);
+            }
+        }
+
+        public List<Entities.Inmueble> TraerInmuebles(int stars)
+        {
+            Database database = new Database();
+            List<Entities.Inmueble> inmuebles = new List<Entities.Inmueble>();
+
+            SqlParameter[] parameters = { new SqlParameter("@estrellas", stars) };
+
+            try
+            {
+                DataTable dataTable = database.Read("TraerInmueblesEstrellas", parameters);
+                foreach (DataRow data in dataTable.Rows)
+                {
+
+                    Entities.Inmueble _inmueble = new Entities.Inmueble(
+                                    data["id"].ToString(),
+                                    data["titulo"].ToString(),
+                                    data["descripcion"].ToString(),
+                                    data["direccion"].ToString(),
+                                    data["ubicacion"].ToString(),
+                                    float.Parse(data["precio"].ToString()),
+                                    data["uri"].ToString()
+                                );
+
+                    if (data["promedio"].ToString() == "")
+                    {
+                        _inmueble.Stars = (int)Math.Round(float.Parse("0"));
+                    }
+                    else
+                    {
+                        _inmueble.Stars = (int)Math.Round(float.Parse(data["promedio"].ToString()));
+                    }
+                    inmuebles.Add(_inmueble);
+
+                }
+
+                return inmuebles;
             }
             catch (Exception error)
             {

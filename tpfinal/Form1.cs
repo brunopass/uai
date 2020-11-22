@@ -35,6 +35,7 @@ namespace tpfinal
                 cards.Add(new Card(_inmueble.Id,_inmueble.Uri,_inmueble.Title, _inmueble.Ubication, _inmueble.Description, _inmueble.Stars,false));
             }
 
+            flowLayoutPanel2.Controls.Clear();
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.WrapContents = false;
@@ -48,13 +49,14 @@ namespace tpfinal
         public void updateHorizontalCards()
         {
             Services.Inmueble inmueble = new Services.Inmueble();
-            List<Entities.Inmueble> inmuebles = inmueble.TraerInmuebles();
+            List<Entities.Inmueble> inmuebles = inmueble.TraerInmuebles(4);
             List<ImageCard> cards = new List<ImageCard>();
 
             foreach (Entities.Inmueble _inmueble in inmuebles)
             {
                 cards.Add(new ImageCard(_inmueble.Id,_inmueble.Uri, _inmueble.Title, _inmueble.Ubication, _inmueble.Stars));
             }
+            flowLayoutPanel2.Controls.Clear();
             flowLayoutPanel2.AutoScroll = true;
             flowLayoutPanel2.FlowDirection = FlowDirection.LeftToRight;
             flowLayoutPanel2.WrapContents = false;
@@ -67,6 +69,7 @@ namespace tpfinal
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+       
             updateVerticalCards();
             updateHorizontalCards();
             
@@ -176,6 +179,23 @@ namespace tpfinal
         {
             Favoritos favoritos = new Favoritos();
             favoritos.ShowDialog();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Search search = new Search(busqueda.Text);
+                search.ShowDialog();
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show(error.Message, "Error");
+            }
+        }
+
+        private void timer1_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
         }
     }
 }

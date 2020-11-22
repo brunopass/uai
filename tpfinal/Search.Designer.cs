@@ -41,14 +41,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4.SuspendLayout();
             this.loggedTab.SuspendLayout();
@@ -192,102 +184,23 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Buscar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.comboBox4);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.comboBox3);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.comboBox2);
-            this.panel5.Controls.Add(this.comboBox1);
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.textBox2);
             this.panel5.Controls.Add(this.button4);
             this.panel5.Location = new System.Drawing.Point(254, 100);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(700, 138);
+            this.panel5.Size = new System.Drawing.Size(700, 83);
             this.panel5.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Estrellas";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(197, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Ubicacion";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(20, 92);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 29);
-            this.comboBox1.TabIndex = 11;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(200, 92);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 29);
-            this.comboBox2.TabIndex = 12;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(372, 92);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 29);
-            this.comboBox3.TabIndex = 14;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(369, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Precio";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(537, 92);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 29);
-            this.comboBox4.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(534, 75);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Ambientes";
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(254, 271);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(254, 215);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(700, 82);
             this.flowLayoutPanel1.TabIndex = 12;
@@ -303,6 +216,8 @@
             this.Controls.Add(this.panel4);
             this.Name = "Search";
             this.Text = "Search";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Search_Load);
             this.panel4.ResumeLayout(false);
             this.loggedTab.ResumeLayout(false);
             this.loggedTab.PerformLayout();
@@ -327,14 +242,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

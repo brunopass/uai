@@ -54,26 +54,40 @@ namespace Services
             
         }
 
+        public Entities.Inmueble TraerInmuebles(string id)
+        {
+            Data.Inmueble inmueble = new Data.Inmueble();
+
+            try
+            {
+                return inmueble.TraerInmuebles(id);
+            }
+            catch (Exception error)
+            {
+                throw new Exception(error.Message);
+            }
+        }
+
+        public List<Entities.Inmueble> TraerInmuebles(int stars)
+        {
+            Data.Inmueble inmueble = new Data.Inmueble();
+
+            try
+            {
+                return inmueble.TraerInmuebles(stars);
+            }
+            catch (Exception error)
+            {
+                throw new Exception(error.Message);
+            }
+        }
+
         public List<string> TraerPaises()
         {
             Data.Inmueble inmueble = new Data.Inmueble();
             try
             {
                 return inmueble.TraerPaises();
-            }
-            catch(Exception error)
-            {
-                throw new Exception(error.Message);
-            }
-        }
-
-        public Entities.Inmueble TraerInmueblePorId(string id)
-        {
-            Data.Inmueble inmueble = new Data.Inmueble();
-
-            try
-            {
-                return inmueble.TraerInmueblePorId(id);
             }
             catch(Exception error)
             {

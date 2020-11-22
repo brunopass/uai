@@ -22,7 +22,7 @@ namespace tpfinal
             try
             {
                 Services.Inmueble _inmueble= new Services.Inmueble();
-                Entities.Inmueble inmueble = _inmueble.TraerInmueblePorId(_id);
+                Entities.Inmueble inmueble = _inmueble.TraerInmuebles(_id);
                 byte[] byteBuffer = Convert.FromBase64String(inmueble.Uri);
                 MemoryStream memoryStream = new MemoryStream(byteBuffer);
                 Bitmap bitmap = new Bitmap(Bitmap.FromStream(memoryStream));

@@ -114,7 +114,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "Card";
-            this.Size = new System.Drawing.Size(698, 248);
+            this.Size = new System.Drawing.Size(700, 250);
             this.Load += new System.EventHandler(this.Card_Load);
             this.Click += new System.EventHandler(this.Card_Click);
             this.MouseLeave += new System.EventHandler(this.Card_MouseLeave);
