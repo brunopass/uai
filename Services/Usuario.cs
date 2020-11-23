@@ -15,7 +15,7 @@ namespace Services
     {
 
         Security security = new Security();
-
+        Logs logs = new Logs();
         private void verify(string nombre, string email, string password)
         {
             if(nombre.Length == 0 || nombre == null)
@@ -77,7 +77,7 @@ namespace Services
             {
                 Data.User user = new User();
                 string msg = user.CreateUser(usuario);
-
+                logs.createLog($"account created: {Entities.Session._id}");
                 return "Cuenta creada con éxito";
             }
             catch
@@ -112,6 +112,7 @@ namespace Services
                     throw new Exception("Error Al iniciar Sesión");
                 }
 
+                logs.createLog($"logged in: {Entities.Session._id}");
                 return "Sesion iniciada";
             }
             catch
@@ -142,6 +143,22 @@ namespace Services
             else
             {
                 throw new Exception("Es necesario iniciar Sesión");
+            }
+        }
+
+        public Entities.Usuario TraerUsuario(string id)
+        {
+
+            try
+            {
+                if (!isLogged()) throw new Exception("Es necesario estar loggeado");
+                Data.User user = new User();
+                logs.createLog($"contact retrieve: {Entities.Session._id}");
+                return user.TraerUsuario(id);
+            }
+            catch(Exception error)
+            {
+                throw new Exception(error.Message);
             }
         }
 

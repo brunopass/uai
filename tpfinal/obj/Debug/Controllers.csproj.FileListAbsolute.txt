@@ -27,3 +27,7 @@ C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.Comentario.resourc
 C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.Favoritos.resources
 C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.MisAlquileres.resources
 C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.Search.resources
+C:\Users\bruno\source\repos\tpfinal\tpfinal\obj\Debug\tpfinal.Contacto.resources
+C:\Users\bruno\source\repos\tpfinal\tpfinal\bin\Debug\EntityFramework.dll
+C:\Users\bruno\source\repos\tpfinal\tpfinal\bin\Debug\Data.dll.config
+C:\Users\bruno\source\repos\tpfinal\tpfinal\bin\Debug\EntityFramework.xml

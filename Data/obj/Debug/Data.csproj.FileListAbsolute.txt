@@ -7,3 +7,8 @@ C:\Users\bruno\source\repos\tpfinal\Data\obj\Debug\Data.csproj.CoreCompileInputs
 C:\Users\bruno\source\repos\tpfinal\Data\obj\Debug\Data.csproj.CopyComplete
 C:\Users\bruno\source\repos\tpfinal\Data\obj\Debug\Data.dll
 C:\Users\bruno\source\repos\tpfinal\Data\obj\Debug\Data.pdb
+C:\Users\bruno\source\repos\tpfinal\Data\bin\Debug\Data.dll.config
+C:\Users\bruno\source\repos\tpfinal\Data\bin\Debug\EntityFramework.dll
+C:\Users\bruno\source\repos\tpfinal\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bruno\source\repos\tpfinal\Data\bin\Debug\EntityFramework.xml
+C:\Users\bruno\source\repos\tpfinal\Data\bin\Debug\EntityFramework.SqlServer.xml

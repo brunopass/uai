@@ -9,6 +9,7 @@ namespace Services
     public class Inmueble
     {
         private Services.Usuario usuario = new Usuario();
+        Logs logs = new Logs();
 
         public string CrearAlquiler(string titulo, string descripcion, string direccion, string ubicacion, float precio,  string uri)
         {
@@ -22,6 +23,7 @@ namespace Services
             Data.Inmueble inmueble = new Data.Inmueble();
             try
             {
+                logs.createLog($"post created: {Entities.Session._id}");
                 return inmueble.AgregarInmueble(
                         new Entities.Inmueble(
                                 Guid.NewGuid().ToString(),
@@ -116,6 +118,7 @@ namespace Services
             try
             {
                 if (!usuario.isLogged()) throw new Exception("Es necesario estar loggeado");
+                logs.createLog($"fav created: {Entities.Session._id}");
                 return inmueble.AgregarFavoritos(Guid.NewGuid().ToString(), id, Entities.Session._id);
             }
             catch(Exception error)
@@ -145,6 +148,7 @@ namespace Services
             Data.Inmueble inmueble = new Data.Inmueble();
             try
             {
+                logs.createLog($"comment created: {Entities.Session._id}");
                 return inmueble.AgregarComentario(comentario);
             }
             catch(Exception error)
@@ -186,6 +190,7 @@ namespace Services
             Data.Inmueble inmueble = new Data.Inmueble();
             try
             {
+                logs.createLog($"fav deleted: {Entities.Session._id}");
                 return inmueble.BorrarFavoritos(id, Entities.Session._id);
             }
             catch(Exception error)

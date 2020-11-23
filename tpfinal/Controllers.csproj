@@ -64,6 +64,12 @@
     <Compile Include="Comentario.Designer.cs">
       <DependentUpon>Comentario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacto.Designer.cs">
+      <DependentUpon>Contacto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Favoritos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Comentario.resx">
       <DependentUpon>Comentario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacto.resx">
+      <DependentUpon>Contacto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Favoritos.resx">
       <DependentUpon>Favoritos.cs</DependentUpon>

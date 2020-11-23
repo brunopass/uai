@@ -9,3 +9,6 @@ C:\Users\bruno\source\repos\tpfinal\Services\obj\Debug\Services.csproj.CoreCompi
 C:\Users\bruno\source\repos\tpfinal\Services\obj\Debug\Services.csproj.CopyComplete
 C:\Users\bruno\source\repos\tpfinal\Services\obj\Debug\Services.dll
 C:\Users\bruno\source\repos\tpfinal\Services\obj\Debug\Services.pdb
+C:\Users\bruno\source\repos\tpfinal\Services\bin\Debug\EntityFramework.dll
+C:\Users\bruno\source\repos\tpfinal\Services\bin\Debug\Data.dll.config
+C:\Users\bruno\source\repos\tpfinal\Services\bin\Debug\EntityFramework.xml

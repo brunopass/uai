@@ -29,7 +29,7 @@ namespace Data
             {
                 return database.Write("CreateUser", parameters);
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 throw new Exception(error.Message);
             }
@@ -49,7 +49,25 @@ namespace Data
             {
                 return database.Read("IniciarSesion", parameters);
             }
-            catch(Exception error)
+            catch (Exception error)
+            {
+                throw new Exception(error.Message);
+            }
+        }
+
+        public Entities.Usuario TraerUsuario(string id)
+        {
+            Data.Database database = new Database();
+            SqlParameter[] parameters = { new SqlParameter("@id", id) };
+
+
+            try
+            {
+                DataTable dataTable = database.Read("TraerUsuario", parameters);
+                Entities.Usuario usuario = new Usuario(dataTable.Rows[0]["email"].ToString(), dataTable.Rows[0]["name"].ToString(), dataTable.Rows[0]["hash"].ToString());
+                return usuario;
+            }
+            catch (Exception error)
             {
                 throw new Exception(error.Message);
             }

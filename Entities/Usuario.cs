@@ -19,6 +19,13 @@ namespace Entities
             this.password = password;
         }
 
+        public Usuario(string email, string nombre, string hash)
+        {
+            this.email = email;
+            this.nombre = nombre;
+            this.hash = hash;
+        }
+
         public string Email
         {
             get { return email; }

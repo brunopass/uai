@@ -16,13 +16,14 @@ namespace tpfinal
     public partial class inmuebleView : Form
     {
         private string _id;
+        private Entities.Inmueble inmueble;
         public inmuebleView(string _id)
         {
             InitializeComponent();
             try
             {
                 Services.Inmueble _inmueble= new Services.Inmueble();
-                Entities.Inmueble inmueble = _inmueble.TraerInmueble(_id);
+                this.inmueble = _inmueble.TraerInmueble(_id);
                 byte[] byteBuffer = Convert.FromBase64String(inmueble.Uri);
                 MemoryStream memoryStream = new MemoryStream(byteBuffer);
                 Bitmap bitmap = new Bitmap(Bitmap.FromStream(memoryStream));
@@ -132,7 +133,16 @@ namespace tpfinal
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Services.Usuario user = new Services.Usuario();
+                Entities.Usuario usuario = user.TraerUsuario(inmueble.Id);
+                Contacto contacto = new Contacto(usuario.Nombre,usuario.Email,inmueble.Price);
+                contacto.ShowDialog();
+            }catch(Exception error)
+            {
+                MessageBox.Show(error.Message, "Error");
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
